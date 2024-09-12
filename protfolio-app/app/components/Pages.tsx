@@ -10,7 +10,7 @@ export default function Pages({eventClick}:setlayoutProps){
            <button className="sideColumn-Btn menu-item"><h3 className="text-2xl justify-between text-white-700 mt-2" onClick={()=>eventClick("wallets")}>Wallets</h3></button>
            <button  className="sideColumn-Btn menu-item"><h3 className="text-2xl justify-between text-white-700 mt-2" onClick={()=>eventClick("portfolio")}>Portfolio</h3></button>
            <button  className="sideColumn-Btn menu-item"><h3 className="text-2xl justify-between text-white-700 mt-2" onClick={()=>eventClick("history")}>History</h3></button>
-           <button  className="sideColumn-Btn menu-item"><h3 className="text-2xl justify-between text-white-700 mt-2" onClick={()=>eventClick("swap")}>Swap</h3></button>
+           <button  className="sideColumn-Btn menu-item"><h3 className="text-2xl justify-between text-white-700 mt-2" onClick={()=>eventClick("swap")}>Transfer</h3></button>
            <button  className="sideColumn-Btn menu-item"><h3 className="text-2xl justify-between text-white-700 mt-2" onClick={()=>eventClick("watchList")}>WatchList</h3></button>
            </div>
          </div>
