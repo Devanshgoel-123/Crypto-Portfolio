@@ -1,7 +1,7 @@
 import InputBox from "./InputComponent"
 export default function SwapValueComp(){
     return (
-        <div className="w-[40%] p-5 flex flex-col h-[550px] border-[#fefefe0d] border-2 rounded-md space-y-4 rounded-xl">
+        <div className="w-[40%] p-5 flex flex-col h-[550px] border-[#fefefe0d] border-2 space-y-4 rounded-xl bg-[#151429]">
                 <InputBox/>
                 <InputBox/>
                 <div className="bg-[#0d0d1f] w-[100%] h-fit p-5 space-y-3 border-[#fefefe0d] border-2 rounded-lg">

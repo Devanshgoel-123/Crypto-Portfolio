@@ -20,7 +20,7 @@ export default function Home() {
       <SideBar/>
       <Navbar/>
       </div>
-      <div className="flex flex-row min-w-[70%] bg-[#151429]">
+      <div className="flex flex-row min-w-[70%] bg-[#151429] h-[90vh] ">
       <Pages eventClick={handleClick} />
       <Layout name={active}/>
       </div>
