@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-
+import Coinslice from "./features/swapCoins"
 export const store = configureStore({
   reducer: {
-    
+    Coinslice
   },
   devTools: process.env.NODE_ENV !== "production",
 });

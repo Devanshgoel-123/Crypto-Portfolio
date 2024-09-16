@@ -1,7 +1,7 @@
 "use client"
 import ConnectButton from "./components/WalletConnect";
 import SideBar from "./components/Sidebar";
-
+import ReduxProvider from "./ReduxProvider"
 import Navbar from "./components/Navbar";
 import Layout from "./components/Layout";
 import Pages from "./components/Pages";
@@ -14,7 +14,7 @@ export default function Home() {
        setActive(name);
      }
   return (
-    <>
+     <ReduxProvider>
     <div className="flex flex-col">
       <div className="flex flex-row border-[#fefefe0d] border-2  justify-between bg-[#151429]">
       <SideBar/>
@@ -25,8 +25,7 @@ export default function Home() {
       <Layout name={active}/>
       </div>
     </div>
+    </ReduxProvider>
    
-   
-    </>
   )
 }

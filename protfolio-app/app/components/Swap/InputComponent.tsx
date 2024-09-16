@@ -1,10 +1,17 @@
-export default function InputBox(){
+interface selectValue{
+    select:(value:String)=>void,
+    
+}
+export default function InputBox({select}:selectValue){
     const availableCurrency=["bitcoin","tether","solana","ethereum","xrp","chainlink","tron","aave","ripple"];
+    const handleChange=(event: React.ChangeEvent<HTMLSelectElement>)=>{
+        select(event.target.value);
+    }
     return(
         <div className="bg-[#0d0d1f] w-[100%] h-fit p-5 space-y-3 border-[#fefefe0d] border-2 rounded-lg">
                     <div className="flex flex-row justify-between ">
                         <h1 className="text-white text-4xl mt-2 font-bold">0.4</h1>
-                        <select className="p-3 rounded-xl bg-transparent text-white border-[#fefefe0d] border-2 font-extrabold text-xl">
+                        <select className="p-3 rounded-xl bg-transparent text-white border-[#fefefe0d] border-2 font-extrabold text-xl" onChange={handleChange}>
                                {
                                 availableCurrency.map((item,index)=>{
                                     return <option value={item}>{item.toUpperCase()}</option>

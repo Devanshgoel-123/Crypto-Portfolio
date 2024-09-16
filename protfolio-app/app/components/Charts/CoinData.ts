@@ -1,4 +1,4 @@
-let ethPrice = [
+let ethereumprice = [
   [1723766400000, 2569.86],
   [1723852800000, 2592.25],
   [1723939200000, 2613.14],
@@ -31,7 +31,7 @@ let ethPrice = [
   [1726272000000, 2445.09],
   [1726331373000, 2417.39],
 ];
-let solanaPrice = [
+let solanaprice = [
   [1723766400000, 142.88],
   [1723852800000, 139.12],
   [1723939200000, 141.69],
@@ -64,7 +64,7 @@ let solanaPrice = [
   [1726272000000, 138.97],
   [1726331688000, 137.39],
 ];
-let tetherPrice = [
+let tetherprice = [
   [1723766400000, 1],
   [1723852800000, 1],
   [1723939200000, 1],
@@ -97,7 +97,7 @@ let tetherPrice = [
   [1726272000000, 1],
   [1726331777000, 1],
 ];
-const cosmosCoin = [
+const cosmosprice = [
   [1723766400000, 4.51],
   [1723852800000, 4.55],
   [1723939200000, 4.61],
@@ -130,7 +130,7 @@ const cosmosCoin = [
   [1726272000000, 4.21],
   [1726331864000, 4.21],
 ];
-let dogeCoin = [
+let dogeprice= [
   [1723766400000, 0.1],
   [1723852800000, 0.1],
   [1723939200000, 0.1],
@@ -163,7 +163,7 @@ let dogeCoin = [
   [1726272000000, 0.11],
   [1726331952000, 0.11],
 ];
-let BitcoinPrice = [
+let bitcoinprice = [
   [1725926400000, 51049.12],
   [1726012800000, 59624.16],
   [1726099200000, 53801.76],
@@ -171,7 +171,7 @@ let BitcoinPrice = [
   [1726272000000, 50620.63],
   [1726303468000, 50012.4],
 ];
-let aaveData = [
+let aaveprice = [
   [1723939200000, 110.83],
   [1724025600000, 111.3],
   [1724112000000, 118.45],
@@ -205,7 +205,7 @@ let aaveData = [
   [1726495545000, 139.89],
 ];
 
-let stellarData = [
+let stellarprice= [
   [1723939200000, 0.1],
   [1724025600000, 0.09],
   [1724112000000, 0.1],
@@ -238,7 +238,7 @@ let stellarData = [
   [1726444800000, 0.1],
   [1726495630000, 0.1],
 ];
-let tronData = [
+let tronprice = [
   [1723939200000, 0.13],
   [1724025600000, 0.13],
   [1724112000000, 0.14],
@@ -271,7 +271,7 @@ let tronData = [
   [1726444800000, 0.15],
   [1726495660000, 0.15],
 ];
-let chainLink = [
+let chainlinkprice= [
   [1723939200000, 10.14],
   [1724025600000, 10.09],
   [1724112000000, 10.19],
@@ -305,14 +305,14 @@ let chainLink = [
   [1726495692000, 10.58],
 ];
 export {
-  solanaPrice,
-  ethPrice,
-  tetherPrice,
-  dogeCoin,
-  cosmosCoin,
-  BitcoinPrice,
-  aaveData,
-  stellarData,
-  tronData,
-  chainLink
+  solanaprice,
+  ethereumprice,
+  tetherprice,
+  dogeprice,
+  cosmosprice,
+  bitcoinprice,
+  aaveprice,
+  stellarprice,
+  tronprice,
+  chainlinkprice
 };
