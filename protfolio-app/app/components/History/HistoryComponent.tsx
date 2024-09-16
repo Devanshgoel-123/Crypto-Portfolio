@@ -1,58 +1,89 @@
+import { useState } from "react";
+import { HistoryChartComponent } from "./HistoryChart";
+import { ethPrice, tetherPrice, solanaPrice, BitcoinPrice } from "../Charts/CoinData";
 
-import { HistoryChartComponent } from "./HistoryChart"
-import { ethPrice,tetherPrice,solanaPrice,cosmosCoin } from "../Charts/CoinData"
-import bitcoin from "../Charts/Bitcoin"
-export default function HistoryComponent(){
-    // useEffect(()=>{
-    //    getData();
-    // },[])
-    return (
-    
-        <div className="flex flex-row py-5 h-[100%]mr-3 flex-wrap justify-around align-top ">
-            <div className="border-[#fefefe0d] border-2 rounded-md h-fit  p-3 bg-[#151429]  flex-basis w-[45%]">
+export default function HistoryComponent() {
+
+  const timePeriods = ["1D", "7D", "1M", "3M", "6M", "1Y"];
+  const [selectedTimePeriod, setSelectedTimePeriod] = useState("1D");
+
+  const handleTimePeriodChange = (period: string) => {
+    setSelectedTimePeriod(period);
+  };
+
+  return (
+    <div className="flex flex-row py-5 h-[100%] mr-3 flex-wrap justify-around align-top">
+      {/* Bitcoin */}
+      <div className="border-[#fefefe0d] border-2 rounded-md h-fit p-3 bg-[#151429] flex-basis w-[45%]">
         <ul className="border-2 border-[#fefefe0d] flex flex-row text-white space-x-2 justify-evenly p-2">
-            <li className="sideColumn-Btn px-4 rounded-xl py-1">1D</li>
-            <li className="sideColumn-Btn  px-4 rounded-xl py-1">7D</li>
-            <li className="sideColumn-Btn  px-4 rounded-xl py-1">1M</li>
-            <li className="sideColumn-Btn  px-4 rounded-xl py-1">3M</li>
-            <li className="sideColumn-Btn  px-4 rounded-xl py-1">6M</li>
-            <li className="sideColumn-Btn  px-4 rounded-xl py-1">1Y</li>
+          {timePeriods.map((period) => (
+            <li
+              key={period}
+              className={`sideColumn-btn px-4 rounded-xl py-1 ${
+                selectedTimePeriod === period ? "sideColumnBtn" : ""
+              }`}
+              onClick={() => handleTimePeriodChange(period)}
+            >
+              {period}
+            </li>
+          ))}
         </ul>
-           <HistoryChartComponent name="bitcoin" price={bitcoin.prices}/>
-    </div>
-    <div className="border-[#fefefe0d] border-2 rounded-md h-fit bg-[#151429] p-3 flex-basis w-[45%]">
+        <HistoryChartComponent name="bitcoin" price={BitcoinPrice} />
+      </div>
+
+      {/* Ethereum */}
+      <div className="border-[#fefefe0d] border-2 rounded-md h-fit p-3 bg-[#151429] flex-basis w-[45%]">
         <ul className="border-2 border-[#fefefe0d] flex flex-row text-white space-x-2 justify-evenly p-2">
-            <li className="sideColumn-Btn px-4 rounded-xl py-1">1D</li>
-            <li className="sideColumn-Btn  px-4 rounded-xl py-1">7D</li>
-            <li className="sideColumn-Btn  px-4 rounded-xl py-1">1M</li>
-            <li className="sideColumn-Btn  px-4 rounded-xl py-1">3M</li>
-            <li className="sideColumn-Btn  px-4 rounded-xl py-1">6M</li>
-            <li className="sideColumn-Btn  px-4 rounded-xl py-1">1Y</li>
+          {timePeriods.map((period) => (
+            <li
+              key={period}
+              className={`sideColumn-btn px-4 rounded-xl py-1 ${
+                selectedTimePeriod === period ? "sideColumnBtn" : ""
+              }`}
+              onClick={() => handleTimePeriodChange(period)}
+            >
+              {period}
+            </li>
+          ))}
         </ul>
-           <HistoryChartComponent name="ethereum" price={ethPrice}/>
-    </div>
-    <div className="border-[#fefefe0d] border-2 rounded-md h-fit  p-3 bg-[#151429] flex-basis w-[45%] mt-4">
+        <HistoryChartComponent name="ethereum" price={ethPrice} />
+      </div>
+
+      {/* Solana */}
+      <div className="border-[#fefefe0d] border-2 rounded-md h-fit p-3 bg-[#151429] flex-basis w-[45%] mt-4">
         <ul className="border-2 border-[#fefefe0d] flex flex-row text-white space-x-2 justify-evenly p-2">
-            <li className="sideColumn-Btn px-4 rounded-xl py-1">1D</li>
-            <li className="sideColumn-Btn  px-4 rounded-xl py-1">7D</li>
-            <li className="sideColumn-Btn  px-4 rounded-xl py-1">1M</li>
-            <li className="sideColumn-Btn  px-4 rounded-xl py-1">3M</li>
-            <li className="sideColumn-Btn  px-4 rounded-xl py-1">6M</li>
-            <li className="sideColumn-Btn  px-4 rounded-xl py-1">1Y</li>
+          {timePeriods.map((period) => (
+            <li
+              key={period}
+              className={`sideColumn-btn px-4 rounded-xl py-1 ${
+                selectedTimePeriod === period ? "sideColumnBtn" : ""
+              }`}
+              onClick={() => handleTimePeriodChange(period)}
+            >
+              {period}
+            </li>
+          ))}
         </ul>
-           <HistoryChartComponent name="solana" price={solanaPrice}/>
-    </div>
-    <div className="border-[#fefefe0d] border-2 rounded-md h-fit p-3 bg-[#151429]  flex-basis w-[45%] mt-4">
+        <HistoryChartComponent name="solana" price={solanaPrice} />
+      </div>
+
+      {/* Tether */}
+      <div className="border-[#fefefe0d] border-2 rounded-md h-fit p-3 bg-[#151429] flex-basis w-[45%] mt-4">
         <ul className="border-2 border-[#fefefe0d] flex flex-row text-white space-x-2 justify-evenly p-2">
-            <li className="sideColumn-Btn px-4 rounded-xl py-1">1D</li>
-            <li className="sideColumn-Btn  px-4 rounded-xl py-1">7D</li>
-            <li className="sideColumn-Btn  px-4 rounded-xl py-1">1M</li>
-            <li className="sideColumn-Btn  px-4 rounded-xl py-1">3M</li>
-            <li className="sideColumn-Btn  px-4 rounded-xl py-1">6M</li>
-            <li className="sideColumn-Btn  px-4 rounded-xl py-1">1Y</li>
+          {timePeriods.map((period) => (
+            <li
+              key={period}
+              className={`sideColumn-btn px-4 rounded-xl py-1 ${
+                selectedTimePeriod === period ? "sideColumnBtn" : ""
+              }`}
+              onClick={() => handleTimePeriodChange(period)}
+            >
+              {period}
+            </li>
+          ))}
         </ul>
-           <HistoryChartComponent name="tether" price={tetherPrice}/>
+        <HistoryChartComponent name="tether" price={tetherPrice} />
+      </div>
     </div>
-        </div>
-    )
+  );
 }

@@ -10,6 +10,7 @@ import HistoryComponent from "./History/HistoryComponent";
 import { ChartComponent } from "./Charts/Chart";
 import MarketComponent from "./MarketLayout/MarketComponent";
 import SwapComplete from "./Swap/SwapComplete";
+import WalletComplete from "./Wallet/WalletComplete";
  interface ActiveComponent{
     name:String
  }
@@ -22,11 +23,7 @@ const WalletLayout:React.FC<ActiveComponent>=({name})=>{
         { activeComponent=="swap" && <SwapComplete/>}
        {
         activeComponent=="wallets" &&<div className="flex flex-row space-x-5">
-        <WalletInfo/>
-        <div className="flex flex-col w-[55%] space-y-5">
-            <WalletProvider/>
-            <WalletValue/>
-        </div>
+        <WalletComplete/>
     </div>
        }
        {

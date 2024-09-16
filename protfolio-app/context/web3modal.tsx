@@ -44,7 +44,8 @@ createWeb3Modal({
   chains: [mainnet],
   projectId,
   enableAnalytics: true, // Optional - defaults to your Cloud configuration
-  enableOnramp: true // Optional - false as default
+  enableOnramp: true, // Optional - false as default,
+  enableSwaps:true
 })
 
 export function Web3Modal({ children }:Readonly<{

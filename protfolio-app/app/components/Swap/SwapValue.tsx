@@ -18,7 +18,7 @@ export default function SwapValueComp(){
                         <h5 className="text-gray-300">18%</h5>
                     </div>
                 </div>
-                <button  className="rounded-sm px-3 bg-[#0d0d1f] border-[#fefefe0d] h-14 text-white sideColumn-Btn  text-xl">
+                <button  className="rounded-xl px-3 bg-[#0d0d1f] border-[#fefefe0d] h-14 text-white sideColumnBtn  text-xl">
                     CONFIRM
                 </button>
         </div>

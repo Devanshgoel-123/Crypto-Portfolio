@@ -20,7 +20,7 @@ export default function WalletConnectionButton(){
    
     return (
         <>
-        <button onClick={handleClick} className="rounded-sm px-3 bg-[#0d0d1f] border-[#fefefe0d] h-10 text-white sideColumn-Btn w-[20%] text-xl">Connect</button>
+        <button onClick={handleClick} className="rounded-sm px-3 bg-[#0d0d1f] border-[#fefefe0d] h-10 text-white sideColumnBtn w-[20%] text-xl">Connect</button>
         </>
     )
 }
