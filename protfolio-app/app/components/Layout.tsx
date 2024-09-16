@@ -22,7 +22,7 @@ const WalletLayout:React.FC<ActiveComponent>=({name})=>{
         <h2 className="m-6 mr-0 text-5xl text-white text-center">{name.toUpperCase()}</h2>
         { activeComponent=="swap" && <SwapComplete/>}
        {
-        activeComponent=="wallets" &&<div className="flex flex-row space-x-5">
+        activeComponent=="wallets" &&<div className="flex flex-row space-x-5 overflow-y-scroll h-[100%]">
         <WalletComplete/>
     </div>
        }

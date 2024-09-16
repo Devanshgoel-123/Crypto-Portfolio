@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { HistoryChartComponent } from "./HistoryChart";
-import { ethPrice, tetherPrice, solanaPrice, BitcoinPrice } from "../Charts/CoinData";
+import { ethPrice, tetherPrice, solanaPrice, BitcoinPrice,aaveData,tronData,stellarData,chainLink } from "../Charts/CoinData";
 
 export default function HistoryComponent() {
 
@@ -67,7 +67,6 @@ export default function HistoryComponent() {
         <HistoryChartComponent name="solana" price={solanaPrice} />
       </div>
 
-      {/* Tether */}
       <div className="border-[#fefefe0d] border-2 rounded-md h-fit p-3 bg-[#151429] flex-basis w-[45%] mt-4">
         <ul className="border-2 border-[#fefefe0d] flex flex-row text-white space-x-2 justify-evenly p-2">
           {timePeriods.map((period) => (
@@ -83,6 +82,70 @@ export default function HistoryComponent() {
           ))}
         </ul>
         <HistoryChartComponent name="tether" price={tetherPrice} />
+      </div>
+      <div className="border-[#fefefe0d] border-2 rounded-md h-fit p-3 bg-[#151429] flex-basis w-[45%] mt-4">
+        <ul className="border-2 border-[#fefefe0d] flex flex-row text-white space-x-2 justify-evenly p-2">
+          {timePeriods.map((period) => (
+            <li
+              key={period}
+              className={`sideColumn-btn px-4 rounded-xl py-1 ${
+                selectedTimePeriod === period ? "sideColumnBtn" : ""
+              }`}
+              onClick={() => handleTimePeriodChange(period)}
+            >
+              {period}
+            </li>
+          ))}
+        </ul>
+        <HistoryChartComponent name="Aave" price={aaveData} />
+      </div>
+      <div className="border-[#fefefe0d] border-2 rounded-md h-fit p-3 bg-[#151429] flex-basis w-[45%] mt-4">
+        <ul className="border-2 border-[#fefefe0d] flex flex-row text-white space-x-2 justify-evenly p-2">
+          {timePeriods.map((period) => (
+            <li
+              key={period}
+              className={`sideColumn-btn px-4 rounded-xl py-1 ${
+                selectedTimePeriod === period ? "sideColumnBtn" : ""
+              }`}
+              onClick={() => handleTimePeriodChange(period)}
+            >
+              {period}
+            </li>
+          ))}
+        </ul>
+        <HistoryChartComponent name="Stellar" price={stellarData} />
+      </div>
+      <div className="border-[#fefefe0d] border-2 rounded-md h-fit p-3 bg-[#151429] flex-basis w-[45%] mt-4">
+        <ul className="border-2 border-[#fefefe0d] flex flex-row text-white space-x-2 justify-evenly p-2">
+          {timePeriods.map((period) => (
+            <li
+              key={period}
+              className={`sideColumn-btn px-4 rounded-xl py-1 ${
+                selectedTimePeriod === period ? "sideColumnBtn" : ""
+              }`}
+              onClick={() => handleTimePeriodChange(period)}
+            >
+              {period}
+            </li>
+          ))}
+        </ul>
+        <HistoryChartComponent name="Tron" price={tronData} />
+      </div>
+      <div className="border-[#fefefe0d] border-2 rounded-md h-fit p-3 bg-[#151429] flex-basis w-[45%] mt-4">
+        <ul className="border-2 border-[#fefefe0d] flex flex-row text-white space-x-2 justify-evenly p-2">
+          {timePeriods.map((period) => (
+            <li
+              key={period}
+              className={`sideColumn-btn px-4 rounded-xl py-1 ${
+                selectedTimePeriod === period ? "sideColumnBtn" : ""
+              }`}
+              onClick={() => handleTimePeriodChange(period)}
+            >
+              {period}
+            </li>
+          ))}
+        </ul>
+        <HistoryChartComponent name="ChainLink" price={chainLink} />
       </div>
     </div>
   );

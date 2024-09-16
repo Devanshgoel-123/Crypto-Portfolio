@@ -18,7 +18,7 @@ export default function ListRow({
   MarketCap,
 }: TokenData) {
   return (
-    <div className="bg-[#0d0d1f] h-10 rounded-lg">
+    <div className="bg-[#0d0d1f] h-10 rounded-lg text-lg">
       <ul
         className="grid grid-flow-col grid-cols-6 text-md space-x-2 text-white font-extrabold justify-between p-2 items-center"
         style={{ gridTemplateColumns: "1fr 1fr 1fr 1.5fr 1.5fr 1fr" }}

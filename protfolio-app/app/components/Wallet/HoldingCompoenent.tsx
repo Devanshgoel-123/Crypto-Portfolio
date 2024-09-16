@@ -1,12 +1,17 @@
+import Image from "next/image"
 interface holdingProps{
     name:String,
   
 }
 const HoldingComponent=({name}:holdingProps)=>{
     return (
-        <div className="bg-[#0d0d1f] w-[100%] h-fit p-5 border-[#fefefe0d] border-2 rounded-lg flex flex-row justify-between mt-3">
-        <h4 className="text-gray-300">{name}</h4>
-        <h5 className="text-gray-300 m-0">Balance : <span className="text-[#00bc84]">0.00</span></h5>
+        <div className="bg-[#0d0d1f] w-[100%] h-fit p-5 border-[#fefefe0d] border-2 rounded-lg flex flex-row justify-start mt-3 hover:bg-[#3a57e8]">
+        <Image src={`/images/${name}.png`} height={45} width={45} alt="" className="bg-transparent rounded-[100%] "/>
+        <div className="flex flex-col items-left ml-5">
+        <h4 className="text-gray-300 text-2xl font-extrabold">{name.slice(0,1).toUpperCase()+name.slice(1,)}</h4>
+        <h5 className="text-[#9Baeca] m-0 text-lg">Balance : <span className="text-[#00bc84]">0.00</span></h5>
+        </div>
+        
     </div>
     )
    
