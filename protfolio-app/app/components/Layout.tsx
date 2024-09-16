@@ -9,6 +9,7 @@ import WalletValue from "./Wallet/WalletValue";
 import HistoryComponent from "./History/HistoryComponent";
 import { ChartComponent } from "./Charts/Chart";
 import MarketComponent from "./MarketLayout/MarketComponent";
+import SwapComplete from "./Swap/SwapComplete";
  interface ActiveComponent{
     name:String
  }
@@ -18,10 +19,7 @@ const WalletLayout:React.FC<ActiveComponent>=({name})=>{
     return(
     <div className="flex flex-col  w-[75%] px-6 pb-6  bg-[#0d0d1f] border-2 border-[#fefefe0d]  ">
         <h2 className="m-6 mr-0 text-5xl text-white text-center">{name.toUpperCase()}</h2>
-        { activeComponent=="swap" && <div className="flex flex-row space-x-5">
-            <SwapValueComp/>
-            <SwapChartComponent/>
-        </div>}
+        { activeComponent=="swap" && <SwapComplete/>}
        {
         activeComponent=="wallets" &&<div className="flex flex-row space-x-5">
         <WalletInfo/>

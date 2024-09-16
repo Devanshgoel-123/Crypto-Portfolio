@@ -6,7 +6,7 @@ export default function WatchListTitle(){
                 <li>TokenLabel</li>
                 <li>Current Price</li>
                 <li className="text-center">1 day change</li>
-                <li className="text-center">30 days Change</li>
+                <li className="text-center">Total Volume</li>
                 <li> Market Cap </li>
             </ul>
         </div>
