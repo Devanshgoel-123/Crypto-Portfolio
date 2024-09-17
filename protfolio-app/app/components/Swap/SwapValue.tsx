@@ -7,7 +7,7 @@ import { setCoins } from "@/redux/features/swapCoins";
 export default function SwapValueComp(){
     const dispatch=useAppDispatch();
     const [coin1,setCoin1]=useState<String>("Bitcoin");
-    const [coin2,setCoin2]=useState<String>("Eth");
+    const [coin2,setCoin2]=useState<String>("Ethereum");
     const handleCoin1Change = (value: string) => {
         setCoin1(value);
       };

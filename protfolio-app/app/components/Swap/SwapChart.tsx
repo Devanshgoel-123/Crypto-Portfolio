@@ -24,7 +24,7 @@ const getPrice = (coinName: String): number[][] => {
     case 'chainlink':
       return chainlinkprice;
     default:
-      return []; // Return a default value if the coin name is not found
+      return ethereumprice; // Return a default value if the coin name is not found
   }
 };
 

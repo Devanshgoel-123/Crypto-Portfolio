@@ -1,14 +1,10 @@
 "use client"
-
-import { useWeb3ModalAccount } from "@web3modal/ethers/react";
+import { walletData } from "./WalletData";
 import HoldingComponent from "./HoldingCompoenent"
 import { FaSearch } from "react-icons/fa";
 export default function WalletInfo() {
-  
-  const currencyArray = ["Bitcoin", "Ethereum", "Tether","Aave","Ripple","Cosmos","ChainLink","Solana","Tron","Xrp"];
-  
   return (
-    <div className="w-[40%] bg-[#151429] h-[100%] border-2 border-[#fefefe0d] p-5 rounded-xl overflow-y-scroll">
+    <div className="w-[50%] bg-[#151429] h-[100%] border-2 border-[#fefefe0d] p-5 rounded-xl overflow-y-scroll">
       <div className="flex flex-row bg-[#0d0d1f] rounded-xl h-12 items-center pl-3">
       <FaSearch  className=" text-white"/>
       <input 
@@ -18,9 +14,9 @@ export default function WalletInfo() {
       </div>
      
       <ul className="flex flex-col mt-4 overflow-y-scroll">
-        {currencyArray.map((currency, index) => (
+        {walletData.result.map((currency, index) => (
           <li key={index} className="mb-2">
-            <HoldingComponent name={currency.toLowerCase()} /> 
+            <HoldingComponent name={currency.name.toLowerCase()} balance={currency.balance_formatted.slice(0,8)} symbol={currency.symbol} /> 
           </li>
         ))}
       </ul>
