@@ -49,7 +49,7 @@ export function HistoryChartComponent({name,price}:coinDetails) {
     <Card className="bg-[#0d0d1f] mt-5 mr-3 w-[100%] ">
       <div className="flex flex-row justify-between text-white font-semibold m-5 mb-10 ml-4">
         <div className="flex flex-row justify-start">
-        <h4>{name}</h4>
+        <h4>{name.slice(0,1).toUpperCase()+name.slice(1,)}</h4>
         <Image src={`/images/${name}.png`} className="ml-3 rounded-xl" width={25} height={25} alt=""/>
         </div>
         <h4>${price[0][1]}</h4>

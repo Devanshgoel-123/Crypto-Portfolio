@@ -8,6 +8,7 @@ export default function SwapValueComp(){
     const dispatch=useAppDispatch();
     const [coin1,setCoin1]=useState<String>("Bitcoin");
     const [coin2,setCoin2]=useState<String>("Ethereum");
+    const [convertedValue, setConvertedValue] = useState<string>("0");
     const handleCoin1Change = (value: string) => {
         setCoin1(value);
       };
@@ -21,6 +22,11 @@ export default function SwapValueComp(){
         console.log(coin2);
         console.log(coin1);
       }, [coin2,coin1]);
+      const convertValue = (inputValue: string) => {
+        
+        const converted = (parseFloat(inputValue) * 0.8).toString(); // Example: 0.8 as conversion rate
+        setConvertedValue(converted);
+      };
     return (
         <div className="w-[40%] p-5 flex flex-col h-[550px] border-[#fefefe0d] border-2 space-y-4 rounded-xl bg-[#151429]">
                 <InputBox select={handleCoin1Change} />
